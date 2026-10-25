@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router'
 
-import { Flex, GoBackButton, Stack, Text } from '@lifeforge/ui'
+import { Flex, GoBackButton, Image, Stack, Text } from '@lifeforge/ui'
 
 import { algsetScrambles } from '../../algorithms/PLL'
 import { DEFAULT_CUBE, applyMoves } from '../../functions/genCube'
@@ -17,11 +17,13 @@ function CFOPPLL() {
             navigate('/cfop-algorithms')
           }}
         />
-        <Flex align="center" as="h1" gap="sm">
-          <img
+        <Flex align="center" as="h1" gap="sm">          <Image
             alt="PLL"
+            fallback={null}
+            fit="contain"
+            height="4em"
             src="/assets/apps/CFOPAlgorithms/landing-pll.webp"
-            style={{ height: '4rem', width: '4rem' }}
+            width="4em"
           />
           <Text size={{ base: '2xl', sm: '3xl' }} weight="semibold">
             Permutation of the Last Layer

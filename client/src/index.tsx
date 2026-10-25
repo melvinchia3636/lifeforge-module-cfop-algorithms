@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 
-import { Card, Grid, ModuleHeader, Text } from '@lifeforge/ui'
+import { Card, Grid, Image, ModuleHeader, Text } from '@lifeforge/ui'
 
 function CFOPAlgorithms() {
   return (
@@ -24,10 +24,14 @@ function CFOPAlgorithms() {
             justify="center"
             to={`/cfop-algorithms/${key.toLowerCase()}`}
           >
-            <img
+            <Image
               alt={key}
+              fallback={null}
+              fit="contain"
+              height="12rem"
+              mb="xl"
               src={`/assets/apps/CFOPAlgorithms/landing-${key.toLowerCase()}.webp`}
-              style={{ height: '12rem', marginBottom: '2rem', width: '12rem' }}
+              width="12rem"
             />
             <Text
               align="center"

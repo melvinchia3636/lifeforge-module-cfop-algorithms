@@ -5,6 +5,7 @@ import {
   Card,
   Flex,
   GoBackButton,
+  Image,
   Stack,
   Text,
   colorWithOpacity
@@ -27,11 +28,13 @@ function CFOPF2L() {
             navigate('/cfop-algorithms')
           }}
         />
-        <Flex align="center" as="h1" gap="sm">
-          <img
+        <Flex align="center" as="h1" gap="sm">          <Image
             alt="OLL"
+            fallback={null}
+            fit="contain"
+            height="4em"
             src="/assets/apps/CFOPAlgorithms/landing-oll.webp"
-            style={{ height: '4rem', width: '4rem' }}
+            width="4em"
           />
           <Text size={{ base: '2xl', sm: '3xl' }} weight="semibold">
             Orientation of the Last Layer

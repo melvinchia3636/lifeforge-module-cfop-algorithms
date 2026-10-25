@@ -5,6 +5,7 @@ import {
   Card,
   Flex,
   GoBackButton,
+  Image,
   Grid,
   Stack,
   Text,
@@ -185,11 +186,13 @@ function CFOPF2L(): React.ReactElement {
             navigate('/cfop-algorithms')
           }}
         />
-        <Flex align="center" as="h1" gap="sm">
-          <img
+        <Flex align="center" as="h1" gap="sm">          <Image
             alt="F2L"
+            fallback={null}
+            fit="contain"
+            height="4em"
             src="/assets/apps/CFOPAlgorithms/landing-f2l.webp"
-            style={{ height: '4rem', width: '4rem' }}
+            width="4em"
           />
           <Text size={{ base: '2xl', sm: '3xl' }} weight="semibold">
             First Two Layers
