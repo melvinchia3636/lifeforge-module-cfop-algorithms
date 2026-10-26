@@ -25,10 +25,11 @@ function CFOPF2L() {
       <Stack as="header" gap="xs">
         <GoBackButton
           onClick={() => {
-            navigate('/cfop-algorithms')
+            navigate(-1)
           }}
         />
-        <Flex align="center" as="h1" gap="sm">          <Image
+        <Flex align="center" as="h1" gap="sm">
+          <Image
             alt="OLL"
             fallback={null}
             fit="contain"

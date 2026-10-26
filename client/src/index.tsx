@@ -22,7 +22,7 @@ function CFOPAlgorithms() {
             align="center"
             as={Link}
             justify="center"
-            to={`/cfop-algorithms/${key.toLowerCase()}`}
+            to={`./${key.toLowerCase()}`}
           >
             <Image
               alt={key}

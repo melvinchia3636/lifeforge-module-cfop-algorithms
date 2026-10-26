@@ -14,10 +14,11 @@ function CFOPPLL() {
       <Stack as="header" gap="xs">
         <GoBackButton
           onClick={() => {
-            navigate('/cfop-algorithms')
+            navigate(-1)
           }}
         />
-        <Flex align="center" as="h1" gap="sm">          <Image
+        <Flex align="center" as="h1" gap="sm">
+          <Image
             alt="PLL"
             fallback={null}
             fit="contain"
