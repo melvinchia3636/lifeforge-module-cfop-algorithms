@@ -2,7 +2,7 @@ import { lazy } from 'react'
 
 import { createForgeModule } from '@lifeforge/federation'
 
-const { forgeAPI, ...manifest } = createForgeModule({
+const { forgeAPI: _, ...manifest } = createForgeModule({
   routes: {
     '/': lazy(() => import('@')),
     '/f2l': lazy(() => import('@/pages/F2L')),
@@ -12,5 +12,3 @@ const { forgeAPI, ...manifest } = createForgeModule({
 })
 
 export default manifest
-
-export { forgeAPI }
