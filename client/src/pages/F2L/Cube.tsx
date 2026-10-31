@@ -250,7 +250,6 @@ function renderPattern(pattern: string): string {
 
 function Cube({ pattern }: { pattern: string }) {
   const ref = useRef<HTMLImageElement>(null)
-
   const [src, setSrc] = useState<string | null>(null)
 
   useEffect(() => {
@@ -262,11 +261,13 @@ function Cube({ pattern }: { pattern: string }) {
 
     if (cached !== undefined) {
       setSrc(cached)
+
       return
     }
 
     if (typeof IntersectionObserver === 'undefined') {
       setSrc(renderPattern(pattern))
+
       return
     }
 
